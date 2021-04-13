@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<remote name="github" fetch="https://github.com" pushurl="ssh://git@github.com" />
 	<remote name="yocto" fetch="https://git.yoctoproject.org/git/" />
 	<remote name="openembedded" fetch="git://git.openembedded.org/" />
 
-	<default remote="github" revision="master" />
+	<remote fetch="ssh://git@cosgit1.ds.jdsu.net:7999/up/" name="bitbucket-upstream"/>
+	<remote fetch="ssh://git@cosgit1.ds.jdsu.net:7999/qt/" name="bitbucket-qt"/>
+	<remote fetch="ssh://git@cosgit1.ds.jdsu.net:7999/fuse/" name="bitbucket-fuse"/>
+
+<!-- 	<default remote="github" revision="master" /> -->
+	<default revision="refs/heads/master" sync-j="4"/>
 
 	<!-- Core layers: poky and meta-oe -->
 	<project name="poky" remote="yocto" revision="dunfell" />
@@ -15,6 +19,9 @@
 
 	<!-- BSP layers -->
 	<project name="meta-raspberrypi" remote="yocto" revision="dunfell" />
+	
+	
+
 
 </manifest>
 
