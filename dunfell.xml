@@ -4,7 +4,12 @@
 	<remote name="yocto" fetch="https://git.yoctoproject.org/git/" />
 	<remote name="openembedded" fetch="git://git.openembedded.org/" />
 
-	<default remote="github" revision="master" />
+	<remote fetch="ssh://git@cosgit1.ds.jdsu.net:7999/up/" name="bitbucket-upstream"/>
+	<remote fetch="ssh://git@cosgit1.ds.jdsu.net:7999/qt/" name="bitbucket-qt"/>
+	<remote fetch="ssh://git@cosgit1.ds.jdsu.net:7999/fuse/" name="bitbucket-fuse"/>
+
+	<default revision="refs/heads/master" sync-j="4"/>
+
 
 	<!-- Core layers: poky and meta-oe -->
 	<project name="poky" remote="yocto" revision="dunfell" />
