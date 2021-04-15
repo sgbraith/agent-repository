@@ -14,8 +14,9 @@
 	<project name="poky" remote="yocto" revision="dunfell" />
 	<project name="meta-openembedded" remote="openembedded" revision="dunfell"/>
 
-	<!-- Additional layers -->
-	<project name="bitbucket-qt" name="ssh://git@cosgit1.ds.jdsu.net:7999/qt/meta-viavi.git" groups="linux,image"/>
+ 	<!-- Additional layers -->
+	<!-- <project name="bitbucket-qt" name="ssh://git@cosgit1.ds.jdsu.net:7999/qt/meta-viavi.git" groups="linux,image"/> -->
+	<project remote="bitbucket-qt" revision="pyro-develop" name="meta-viavi" path="sources/meta-viavi" groups="linux,image"/>
 
 	<!-- BSP layers -->
 	<project name="meta-raspberrypi" remote="yocto" revision="dunfell" />
