@@ -11,15 +11,17 @@
 	<default revision="refs/heads/master" sync-j="4"/>
 
 	<!-- Core layers: poky and meta-oe -->
-	<project name="poky" remote="yocto" revision="dunfell" />
-	<project name="meta-openembedded" remote="openembedded" revision="dunfell"/>
+	<project remote="yocto" name="poky" revision="dunfell" />
+	<project remote="openembedded" name="meta-openembedded" revision="dunfell"/>
+	
 
  	<!-- Additional layers -->
+	<project remote="openembedded" name="meta-python2" revision="dunfell"/>
 	<!-- <project name="bitbucket-qt" name="ssh://git@cosgit1.ds.jdsu.net:7999/qt/meta-viavi.git" groups="linux,image"/> -->
-	<project remote="bitbucket-qt" revision="pyro-develop" name="meta-viavi" path="sources/meta-viavi" groups="linux,image"/>
+	<project remote="bitbucket-qt" revision="pyro-develop" name="meta-viavi" groups="linux,image"/>
 
 	<!-- BSP layers -->
-	<project name="meta-raspberrypi" remote="yocto" revision="dunfell" />
+	<project remote="yocto" name="meta-raspberrypi" revision="dunfell" />
 
 	<!-- if we need to use a script to pull changes to the build env
 	<project remote="wm" revision="master" name="agent-build" path="build" groups="linux,image">
