@@ -32,7 +32,7 @@
 	<project remote="bitbucket-fuse" name="ma-cpp-executor" path="sources/ma-cpp-executor" groups="linux"/>
 	<project remote="bitbucket-fuse" name="ma-python-executor" path="sources/ma-python-executor" groups="linux,windows"/>
 
-	<project remote="bitbucket-qt" name="cloudsite-ma" path="source/cloudsite-ma" groups="linux,windows"/>
+	<project remote="bitbucket-qt" name="cloudsite-ma" path="sources/cloudsite-ma" groups="linux,windows"/>
 
 </manifest>
 
