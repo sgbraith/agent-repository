@@ -2,7 +2,6 @@
 <manifest>
 	<remote name="yocto" fetch="https://git.yoctoproject.org/git/" />
 	<remote name="openembedded" fetch="git://git.openembedded.org/" />
-	<remote name="wm" fetch="git://github.com/sgbraith/" />
 
 	<remote name="bitbucket-upstream" fetch="ssh://git@cosgit1.ds.jdsu.net:7999/up/"/>
 	<remote name="bitbucket-qt" fetch="ssh://git@cosgit1.ds.jdsu.net:7999/qt/"/>
@@ -13,11 +12,9 @@
 	<!-- Core layers: poky and meta-oe -->
 	<project remote="yocto" name="poky" revision="dunfell" />
 	<project remote="openembedded" name="meta-openembedded" revision="dunfell"/>
-	
 
  	<!-- Additional layers -->
 	<project remote="openembedded" name="meta-python2" revision="dunfell"/>
-	<!-- <project name="bitbucket-qt" name="ssh://git@cosgit1.ds.jdsu.net:7999/qt/meta-viavi.git" groups="linux,image"/> -->
 	<project remote="bitbucket-qt" revision="pyro-develop" name="meta-viavi" groups="linux,image"/>
 
 	<!-- BSP layers -->
@@ -28,13 +25,6 @@
 		<linkfile src="scripts/load-build-env" dest="load-build-env" />
 	</project>
 	-->
-	
-	<!-- application layers -->
-	<project remote="bitbucket-fuse" name="maf-portal" path="sources/maf-portal" groups="linux,windows"/>
-	<project remote="bitbucket-fuse" name="ma-cpp-executor" path="sources/ma-cpp-executor" groups="linux"/>
-	<project remote="bitbucket-fuse" name="ma-python-executor" path="sources/ma-python-executor" groups="linux,windows"/>
-
-	<project remote="bitbucket-qt" name="cloudsite-ma" path="sources/cloudsite-ma" groups="linux,windows"/>
 
 </manifest>
 
